@@ -7,7 +7,6 @@ RUN apk add --update --no-cache \
     pip3 install --upgrade pip && \
     find / -type d -name __pycache__ -exec rm -r {} +   && \
     rm -rf /usr/lib/python*/ensurepip                   && \
-    rm -rf /usr/lib/python*/lib2to3                     && \
     rm -rf /usr/lib/python*/turtledemo                  && \
     rm -rf /usr/lib/python*/idlelib                     && \
     rm -f /usr/lib/python*/turtle.py                    && \
