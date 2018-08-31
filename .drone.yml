@@ -1,0 +1,6 @@
+pipeline:
+  deploy:
+    image: plugins/docker
+    repo: mythern/python3-uwsgi-alpine
+    secrets: [ docker_username, docker_password ]
+    auto_tag: true
