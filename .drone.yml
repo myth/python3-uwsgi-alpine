@@ -1,6 +1,13 @@
-pipeline:
-  deploy:
-    image: plugins/docker
+kind: pipeline
+name: publish
+
+steps:
+- name: deploy
+  image: plugins/docker
+  settings:
     repo: mythern/python3-uwsgi-alpine
-    secrets: [ docker_username, docker_password ]
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
     auto_tag: true
